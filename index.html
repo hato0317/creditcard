@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Credit Card</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <div id="main">
+        <div id="card">
+          <div class="visaLogo">
+            <i class="fab fa-cc-visa"></i>
+          </div>
+          <div class="number">
+            <p>{{number}}</p>
+          </div>
+          <span class="underWrapper">
+            <span class="name">
+              <p>NAME</p>
+              <h5>{{name}}</h5>
+            </span>
+            <span class="expiration">
+              <p>有効期限</p>
+              <span class="month">
+                <span>{{month}}月</span>
+              </span>
+              <span class="year">
+                <span>/{{year}}年</span>
+              </span>
+            </span>
+          </span>
+        </div>
+        <div id="info">
+          <p>number</p>
+          <input type="tel" v-model="number" maxlength="16" autocomplete="off" oninput="value = value.replace(/[^0-9]+/i,'');"><!--type="text"でoninputを使えば数字のみでmaxlengthを使える-->
+          <p>name</p>
+          <input type="text" v-model="name" autocomplete="off">
+          <p>有効期限</p>
+          <div id="expiration">
+            <select class="half" type="text" v-model="month">
+              <option value="">Month</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select type="text" v-model="year" placeholder="year">
+              <option value="">Year</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <input id="cvv" type="text" maxlength="4" placeholder="cvv" autocomplete="off" oninput="value = value.replace(/[^0-9]+/i,'');"><!--type="text"でoninputを使えば数字のみでmaxlengthを使える-->
+          </div>
+        </div>
+        <div class="submit">
+          <button>Submit</button>
+        </div>
+      </div>
+      <script>
+          new Vue({
+            el: "#main",
+            data: {
+                number: "",
+                name: "",
+                month: "",
+                year: ""
+                }
+            });
+      </script>
+</body>
+</html>

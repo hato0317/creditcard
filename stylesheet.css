@@ -1,0 +1,179 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 0px;
+  background: -webkit-radial-gradient(5% 5%, ellipse, #f0acad 0%, rgba(240, 172, 173, 0) 75%), -webkit-radial-gradient(95% 5%, ellipse, #f8ae4b 0%, rgba(248, 174, 75, 0) 75%), -webkit-radial-gradient(95% 95%, ellipse, #dbb048 -15%, rgba(219, 176, 72, 0) 75%), -webkit-radial-gradient(5% 95%, ellipse, #c284e9 50%, rgba(194, 132, 233, 0) 75%);
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f5f5f5;
+  margin: auto;
+  width: 360px;
+  height: 220px;
+  border-radius: 10px;
+  color: white;
+  color: #6d6f70;
+  -webkit-box-shadow: 5px 7px 15px 0px rgba(64, 64, 64, 0.5);
+          box-shadow: 5px 7px 15px 0px rgba(64, 64, 64, 0.5);
+}
+
+#card .visaLogo {
+  margin: 15px 20px;
+  font-size: 36px;
+  color: #6d6f70;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#card .number {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+}
+
+#card .name {
+  font-size: 20px;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card .name p {
+  font-size: 10px;
+}
+
+#card .underWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 20px;
+}
+
+#card .expiration {
+  display: block;
+}
+
+#card .expiration p {
+  font-size: 10px;
+}
+
+#info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#info p {
+  color: #6d6f70;
+  margin-left: 2px;
+}
+
+#info #expiration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#info #cvv {
+  width: 80px;
+  padding: 5px 0;
+  margin-left: 30px;
+  text-align: center;
+}
+
+#info input,
+#info select {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+#info input {
+  width: 360px;
+}
+
+#info select {
+  width: 30%;
+}
+
+.submit {
+  text-align: center;
+  margin: 50px;
+}
+
+.submit button {
+  background-color: white;
+  color: #6d6f70;
+  width: 410px;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*矢印消去*/
+@media screen and (max-width: 500px) {
+  #info input {
+    width: 240px;
+  }
+  #info select {
+    padding: 0 14px;
+  }
+  .submit button {
+    width: 200px;
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
