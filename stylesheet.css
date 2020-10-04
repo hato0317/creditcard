@@ -168,6 +168,9 @@ input[type="number"] {
   #info input {
     width: 240px;
   }
+  #main{
+    padding:20px 0px;
+  }
   #info select {
     padding: 0 14px;
   }
