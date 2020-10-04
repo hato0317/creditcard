@@ -35,7 +35,7 @@
         </div>
         <div id="info">
           <p>number</p>
-          <input type="tel" v-model="number" maxlength="16" autocomplete="off" oninput="value = value.replace(/[^0-9]+/i,'');"><!--type="text"でoninputを使えば数字のみでmaxlengthを使える-->
+          <input type="tel" v-model="number" maxlength="16" autocomplete="off" oninput="value = value.replace(/[^0-9]+/i,'');"><!--type="tel"でoninputを使えば数字のみでmaxlengthを使える-->
           <p>name</p>
           <input type="text" v-model="name" autocomplete="off">
           <p>有効期限</p>
@@ -70,7 +70,7 @@
               <option value="30">30</option>
               <option value="31">31</option>
             </select>
-            <input id="cvv" type="text" maxlength="4" placeholder="cvv" autocomplete="off" oninput="value = value.replace(/[^0-9]+/i,'');"><!--type="text"でoninputを使えば数字のみでmaxlengthを使える-->
+            <input id="cvv" type="tel" maxlength="4" placeholder="cvv" autocomplete="off" oninput="value = value.replace(/[^0-9]+/i,'');"><!--type="tel"でoninputを使えば数字のみでmaxlengthを使える-->
           </div>
         </div>
         <div class="submit">
